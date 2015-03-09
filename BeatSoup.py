@@ -65,7 +65,7 @@ def grab_info(stockid=None):
 stockid="sh600831"
 
 stockid_list=[]
-hy_one = hy.find_one() #hy_one is dict one category of the all hangye kinds   {"HY": "林业", "sz00001":{}, "sz990123":{},...}
+hy_one = hy.find_one() #hy_one is dict include all categories in only one hangye   {"HY": "林业", "sz00001":{}, "sz990123":{},...}
 for k, v in hy_one.items():
         #drop k that does not match stockid,such k = "HY", "_id"
         if re.match(r'[s][z,h]', k):
